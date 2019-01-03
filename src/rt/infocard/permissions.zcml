@@ -7,6 +7,12 @@
   <!-- -*- extra stuff goes here -*- -->
 
     <permission
+        id="rt.infocard.AddCard"
+        title="rt.infocard: Add Card"
+    />
+
+        
+    <permission
         id="rt.infocard.AddInfocard"
         title="rt.infocard: Add Infocard"
     />
