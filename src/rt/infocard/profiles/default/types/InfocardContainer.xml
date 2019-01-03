@@ -22,17 +22,15 @@
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
     <element value="Infocard" />
-      <!--
-    <element value="Document" />
-    <element value="File" />
-  -->
+    <element value="Folder" />
   </property>
+
   <!-- Schema, class and security -->
   <property name="add_permission">rt.infocard.AddInfocardContainer</property>
   <property name="klass">rt.infocard.content.infocard_container.InfocardContainer</property>
   <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema">rt.infocard.content.infocard_container.IInfocardContainer</property>
+  <property name="schema">rt.infocard.interfaces.IInfocardContainer</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">

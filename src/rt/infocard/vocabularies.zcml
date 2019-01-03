@@ -1,0 +1,15 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="PGXXIII.corridoiumanitari">
+
+    <utility
+      name="rt.infocard.infocardcontainer.servicetypes"
+      component=".vocabularies.InfocardContainerServiceTypesFactory"
+      />
+
+    <utility
+      name="rt.infocard.infocardcontainer.recipients"
+      component=".vocabularies.InfocardContainerRecipientsFactory"
+      />
+
+</configure>
