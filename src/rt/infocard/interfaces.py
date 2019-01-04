@@ -72,7 +72,10 @@ class IInfocard(model.Schema):
     directives.widget(
         'servicetypes',
         AjaxSelectFieldWidget,
-        vocabulary='rt.infocard.infocardcontainer.servicetypes'
+        vocabulary='rt.infocard.infocardcontainer.servicetypes',
+        pattern_options={
+            'allowNewItems': False
+        }
     )
 
     recipients = schema.Tuple(
@@ -87,5 +90,8 @@ class IInfocard(model.Schema):
     directives.widget(
         'recipients',
         AjaxSelectFieldWidget,
-        vocabulary='rt.infocard.infocardcontainer.recipients'
+        vocabulary='rt.infocard.infocardcontainer.recipients',
+        pattern_options={
+            'allowNewItems': False
+        }
     )
