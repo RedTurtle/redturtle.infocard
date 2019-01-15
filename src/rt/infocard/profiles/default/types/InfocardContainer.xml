@@ -2,7 +2,7 @@
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     name="InfocardContainer"
     meta_type="Dexterity FTI"
-    i18n:domain="rt.infocard">
+    i18n:domain="redturtle.infocard">
 
   <!-- Basic properties -->
   <property
@@ -26,11 +26,11 @@
   </property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">rt.infocard.AddInfocardContainer</property>
-  <property name="klass">rt.infocard.content.infocard_container.InfocardContainer</property>
+  <property name="add_permission">redturtle.infocard.AddInfocardContainer</property>
+  <property name="klass">redturtle.infocard.content.infocard_container.InfocardContainer</property>
   <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema">rt.infocard.interfaces.IInfocardContainer</property>
+  <property name="schema">redturtle.infocard.interfaces.IInfocardContainer</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">

@@ -3,7 +3,7 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:i18n="http://namespaces.zope.org/i18n"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="rt.infocard">
+    i18n_domain="redturtle.infocard">
 
   <i18n:registerTranslations directory="locales" />
 
@@ -22,25 +22,25 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="rt.infocard"
+      title="redturtle.infocard"
       directory="profiles/default"
-      description="Installs the rt.infocard add-on."
+      description="Installs the redturtle.infocard add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.post_install"
       />
 
   <genericsetup:registerProfile
       name="uninstall"
-      title="rt.infocard (uninstall)"
+      title="redturtle.infocard (uninstall)"
       directory="profiles/uninstall"
-      description="Uninstalls the rt.infocard add-on."
+      description="Uninstalls the redturtle.infocard add-on."
       provides="Products.GenericSetup.interfaces.EXTENSION"
       post_handler=".setuphandlers.uninstall"
       />
 
   <utility
       factory=".setuphandlers.HiddenProfiles"
-      name="rt.infocard-hiddenprofiles"
+      name="redturtle.infocard-hiddenprofiles"
       />
 
   <!-- -*- extra stuff goes here -*- -->

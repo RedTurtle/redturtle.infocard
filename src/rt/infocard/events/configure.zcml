@@ -6,7 +6,7 @@
     i18n_domain="PGXXIII.corridoiumanitari">
 
     <subscriber
-      for="rt.infocard.interfaces.IInfocardContainer
+      for="redturtle.infocard.interfaces.IInfocardContainer
             zope.lifecycleevent.interfaces.IObjectAddedEvent"
       handler=".infocardcontainer.add_new_infocardcontainer"
       />

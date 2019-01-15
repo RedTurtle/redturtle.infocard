@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from rt.infocard.content.card import ICard  # NOQA E501
-from rt.infocard.testing import RT_INFOCARD_INTEGRATION_TESTING  # noqa
+from redturtle.infocard.content.card import ICard  # NOQA E501
+from redturtle.infocard.testing import RT_INFOCARD_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID

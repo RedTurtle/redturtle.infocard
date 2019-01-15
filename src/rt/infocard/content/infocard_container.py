@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from plone.dexterity.content import Container
-from rt.infocard.interfaces import IInfocardContainer
+from redturtle.infocard.interfaces import IInfocardContainer
 from zope.interface import implementer
 
 

@@ -5,7 +5,7 @@ from plone.app.textfield import RichText
 from plone.app.z3cform.widget import AjaxSelectFieldWidget
 from plone.autoform import directives
 from plone.supermodel import model
-from rt.infocard import _
+from redturtle.infocard import _
 from zope import schema
 from zope.publisher.interfaces.browser import IDefaultBrowserLayer
 
@@ -72,7 +72,7 @@ class IInfocard(model.Schema):
     directives.widget(
         'servicetypes',
         AjaxSelectFieldWidget,
-        vocabulary='rt.infocard.infocardcontainer.servicetypes',
+        vocabulary='redturtle.infocard.infocardcontainer.servicetypes',
         pattern_options={
             'allowNewItems': False
         }
@@ -90,7 +90,7 @@ class IInfocard(model.Schema):
     directives.widget(
         'recipients',
         AjaxSelectFieldWidget,
-        vocabulary='rt.infocard.infocardcontainer.recipients',
+        vocabulary='redturtle.infocard.infocardcontainer.recipients',
         pattern_options={
             'allowNewItems': False
         }

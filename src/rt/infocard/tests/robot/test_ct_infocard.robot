@@ -4,13 +4,13 @@
 #
 # Run this robot test stand-alone:
 #
-#  $ bin/test -s rt.infocard -t test_infocard.robot --all
+#  $ bin/test -s redturtle.infocard -t test_infocard.robot --all
 #
 # Run this robot test with robot server (which is faster):
 #
 # 1) Start robot server:
 #
-# $ bin/robot-server --reload-path src rt.infocard.testing.RT_INFOCARD_ACCEPTANCE_TESTING
+# $ bin/robot-server --reload-path src redturtle.infocard.testing.RT_INFOCARD_ACCEPTANCE_TESTING
 #
 # 2) Run robot tests:
 #

@@ -2,7 +2,7 @@
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
     name="Card"
     meta_type="Dexterity FTI"
-    i18n:domain="rt.infocard">
+    i18n:domain="redturtle.infocard">
 
   <!-- Basic properties -->
   <property
@@ -21,10 +21,10 @@
   <property name="global_allow">False</property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">rt.infocard.AddCard</property>
-  <property name="klass">rt.infocard.content.card.Card</property>
+  <property name="add_permission">redturtle.infocard.AddCard</property>
+  <property name="klass">redturtle.infocard.content.card.Card</property>
   <property name="model_source"></property>
-  <property name="schema">rt.infocard.interfaces.ICard</property>
+  <property name="schema">redturtle.infocard.interfaces.ICard</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">

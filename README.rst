@@ -3,7 +3,7 @@
    This text does not appear on pypi or github. It is a comment.
 
 ===========
-rt.infocard
+redturtle.infocard
 ===========
 
 Tell me what your product does
@@ -38,14 +38,14 @@ This product has been translated into
 Installation
 ------------
 
-Install rt.infocard by adding it to your buildout::
+Install redturtle.infocard by adding it to your buildout::
 
     [buildout]
 
     ...
 
     eggs =
-        rt.infocard
+        redturtle.infocard
 
 
 and then running ``bin/buildout``
@@ -54,8 +54,8 @@ and then running ``bin/buildout``
 Contribute
 ----------
 
-- Issue Tracker: https://github.com/collective/rt.infocard/issues
-- Source Code: https://github.com/collective/rt.infocard
+- Issue Tracker: https://github.com/collective/redturtle.infocard/issues
+- Source Code: https://github.com/collective/redturtle.infocard
 - Documentation: https://docs.plone.org/foo/bar
 
 

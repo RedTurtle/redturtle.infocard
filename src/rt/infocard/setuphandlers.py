@@ -9,7 +9,7 @@ class HiddenProfiles(object):
     def getNonInstallableProfiles(self):
         """Hide uninstall profile from site-creation and quickinstaller."""
         return [
-            'rt.infocard:uninstall',
+            'redturtle.infocard:uninstall',
         ]
 
 

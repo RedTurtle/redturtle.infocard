@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
-from rt.infocard.content.infocard_container import IInfocardContainer  # NOQA E501
-from rt.infocard.testing import RT_INFOCARD_INTEGRATION_TESTING  # noqa
+from redturtle.infocard.content.infocard_container import IInfocardContainer  # NOQA E501
+from redturtle.infocard.testing import RT_INFOCARD_INTEGRATION_TESTING  # noqa
 from plone import api
 from plone.api.exc import InvalidParameterError
 from plone.app.testing import setRoles

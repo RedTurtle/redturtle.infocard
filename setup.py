@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Installer for the rt.infocard package."""
+"""Installer for the redturtle.infocard package."""
 
 from setuptools import find_packages
 from setuptools import setup
@@ -13,7 +13,7 @@ long_description = '\n\n'.join([
 
 
 setup(
-    name='rt.infocard',
+    name='redturtle.infocard',
     version='1.0a1',
     description="An add-on for Plone",
     long_description=long_description,
@@ -31,7 +31,7 @@ setup(
     keywords='Python Plone',
     author='Filippo Campi',
     author_email='sviluppoplone@redturtle.it',
-    url='https://pypi.python.org/pypi/rt.infocard',
+    url='https://pypi.python.org/pypi/redturtle.infocard',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
     namespace_packages=['rt'],
@@ -61,6 +61,6 @@ setup(
     [z3c.autoinclude.plugin]
     target = plone
     [console_scripts]
-    update_locale = rt.infocard.locales.update:update_locale
+    update_locale = redturtle.infocard.locales.update:update_locale
     """,
 )

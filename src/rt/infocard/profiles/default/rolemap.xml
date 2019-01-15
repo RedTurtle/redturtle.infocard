@@ -3,7 +3,7 @@
   <permissions>
   <!-- -*- extra stuff goes here -*- -->
 
-    <permission name="rt.infocard: Add Card" acquire="True">
+    <permission name="redturtle.infocard: Add Card" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>
       <role name="Owner"/>
@@ -11,7 +11,7 @@
     </permission>
 
         
-    <permission name="rt.infocard: Add Infocard" acquire="True">
+    <permission name="redturtle.infocard: Add Infocard" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>
       <role name="Owner"/>
@@ -19,7 +19,7 @@
     </permission>
 
         
-    <permission name="rt.infocard: Add InfocardContainer" acquire="True">
+    <permission name="redturtle.infocard: Add InfocardContainer" acquire="True">
       <role name="Manager"/>
       <role name="Site Administrator"/>
       <role name="Owner"/>

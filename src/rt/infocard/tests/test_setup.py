@@ -3,13 +3,13 @@
 from plone import api
 from plone.app.testing import setRoles
 from plone.app.testing import TEST_USER_ID
-from rt.infocard.testing import RT_INFOCARD_INTEGRATION_TESTING  # noqa
+from redturtle.infocard.testing import RT_INFOCARD_INTEGRATION_TESTING  # noqa
 
 import unittest
 
 
 class TestSetup(unittest.TestCase):
-    """Test that rt.infocard is properly installed."""
+    """Test that redturtle.infocard is properly installed."""
 
     layer = RT_INFOCARD_INTEGRATION_TESTING
 
@@ -19,13 +19,13 @@ class TestSetup(unittest.TestCase):
         self.installer = api.portal.get_tool('portal_quickinstaller')
 
     def test_product_installed(self):
-        """Test if rt.infocard is installed."""
+        """Test if redturtle.infocard is installed."""
         self.assertTrue(self.installer.isProductInstalled(
-            'rt.infocard'))
+            'redturtle.infocard'))
 
     def test_browserlayer(self):
         """Test that IRtInfocardLayer is registered."""
-        from rt.infocard.interfaces import (
+        from redturtle.infocard.interfaces import (
             IRtInfocardLayer)
         from plone.browserlayer import utils
         self.assertIn(
@@ -42,17 +42,17 @@ class TestUninstall(unittest.TestCase):
         self.installer = api.portal.get_tool('portal_quickinstaller')
         roles_before = api.user.get_roles(TEST_USER_ID)
         setRoles(self.portal, TEST_USER_ID, ['Manager'])
-        self.installer.uninstallProducts(['rt.infocard'])
+        self.installer.uninstallProducts(['redturtle.infocard'])
         setRoles(self.portal, TEST_USER_ID, roles_before)
 
     def test_product_uninstalled(self):
-        """Test if rt.infocard is cleanly uninstalled."""
+        """Test if redturtle.infocard is cleanly uninstalled."""
         self.assertFalse(self.installer.isProductInstalled(
-            'rt.infocard'))
+            'redturtle.infocard'))
 
     def test_browserlayer_removed(self):
         """Test that IRtInfocardLayer is removed."""
-        from rt.infocard.interfaces import \
+        from redturtle.infocard.interfaces import \
             IRtInfocardLayer
         from plone.browserlayer import utils
         self.assertNotIn(

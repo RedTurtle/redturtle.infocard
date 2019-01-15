@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from plone.app.testing import ROBOT_TEST_LEVEL
 from plone.testing import layered
-from rt.infocard.testing import RT_INFOCARD_ACCEPTANCE_TESTING  # noqa
+from redturtle.infocard.testing import RT_INFOCARD_ACCEPTANCE_TESTING  # noqa
 
 import os
 import robotsuite

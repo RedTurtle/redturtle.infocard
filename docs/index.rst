@@ -1,5 +1,5 @@
 ===========
-rt.infocard
+redturtle.infocard
 ===========
 
 User documentation

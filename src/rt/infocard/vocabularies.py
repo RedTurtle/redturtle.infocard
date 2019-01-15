@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from Acquisition import aq_chain
 from plone.i18n.normalizer.interfaces import IIDNormalizer
-from rt.infocard.content.infocard_container import InfocardContainer
+from redturtle.infocard.content.infocard_container import InfocardContainer
 from zope.component import getUtility
 from zope.interface import implementer
 from zope.schema.interfaces import IVocabularyFactory

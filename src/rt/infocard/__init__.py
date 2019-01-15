@@ -3,4 +3,4 @@
 from zope.i18nmessageid import MessageFactory
 
 
-_ = MessageFactory('rt.infocard')
+_ = MessageFactory('redturtle.infocard')

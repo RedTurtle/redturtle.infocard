@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <layers>
   <layer
-      name="rt.infocard"
-      interface="rt.infocard.interfaces.IRtInfocardLayer"
+      name="redturtle.infocard"
+      interface="redturtle.infocard.interfaces.IRtInfocardLayer"
       />
 </layers>

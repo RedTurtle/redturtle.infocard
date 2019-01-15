@@ -7,7 +7,7 @@ from plone.app.testing import IntegrationTesting
 from plone.app.testing import PloneSandboxLayer
 from plone.testing import z2
 
-import rt.infocard
+import redturtle.infocard
 
 
 class RtInfocardLayer(PloneSandboxLayer):
@@ -18,10 +18,10 @@ class RtInfocardLayer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
-        self.loadZCML(package=rt.infocard)
+        self.loadZCML(package=redturtle.infocard)
 
     def setUpPloneSite(self, portal):
-        applyProfile(portal, 'rt.infocard:default')
+        applyProfile(portal, 'redturtle.infocard:default')
 
 
 RT_INFOCARD_FIXTURE = RtInfocardLayer()

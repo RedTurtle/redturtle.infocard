@@ -6,18 +6,18 @@
   <configure zcml:condition="installed AccessControl.security">
   <!-- -*- extra stuff goes here -*- -->
     <permission
-        id="rt.infocard.AddCard"
-        title="rt.infocard: Add Card"
+        id="redturtle.infocard.AddCard"
+        title="redturtle.infocard: Add Card"
     />
 
     <permission
-        id="rt.infocard.AddInfocard"
-        title="rt.infocard: Add Infocard"
+        id="redturtle.infocard.AddInfocard"
+        title="redturtle.infocard: Add Infocard"
     />
 
     <permission
-        id="rt.infocard.AddInfocardContainer"
-        title="rt.infocard: Add InfocardContainer"
+        id="redturtle.infocard.AddInfocardContainer"
+        title="redturtle.infocard: Add InfocardContainer"
     />
 
   </configure>

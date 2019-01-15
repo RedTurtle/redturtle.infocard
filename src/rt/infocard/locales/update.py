@@ -5,7 +5,7 @@ import pkg_resources
 import subprocess
 
 
-domain = 'rt.infocard'
+domain = 'redturtle.infocard'
 os.chdir(pkg_resources.resource_filename(domain, ''))
 os.chdir('../../../')
 target_path = 'src/rt/infocard/'
