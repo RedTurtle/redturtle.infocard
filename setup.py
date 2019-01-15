@@ -34,7 +34,7 @@ setup(
     url='https://pypi.python.org/pypi/redturtle.infocard',
     license='GPL version 2',
     packages=find_packages('src', exclude=['ez_setup']),
-    namespace_packages=['rt'],
+    namespace_packages=['redturtle'],
     package_dir={'': 'src'},
     include_package_data=True,
     zip_safe=False,
