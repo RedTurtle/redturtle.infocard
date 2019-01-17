@@ -1,0 +1,20 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="PGXXIII.corridoiumanitari">
+
+    <subscriber
+      for="redturtle.infocard.interfaces.IInfocardContainer
+            zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".infocardcontainer.add_new_infocardcontainer"
+      />
+
+    <subscriber
+      for="redturtle.infocard.interfaces.ICard
+           zope.lifecycleevent.interfaces.IObjectRemovedEvent"
+      handler=".card.remove_card"
+      />
+
+</configure>

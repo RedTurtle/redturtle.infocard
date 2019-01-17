@@ -1,0 +1,70 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="redturtle.infocard">
+
+  <!-- Set overrides folder for Just-a-Bunch-Of-Templates product -->
+  <include package="z3c.jbot" file="meta.zcml" />
+  <browser:jbot
+      directory="overrides"
+      layer="redturtle.infocard.interfaces.IRedturtleInfocardLayer"
+      />
+
+  <!-- Publish static files -->
+  <plone:static
+      name="redturtle.infocard"
+      type="plone"
+      directory="static"
+      />
+
+  <!-- custom add and edit form for Card -->
+  <adapter
+    for="Products.CMFCore.interfaces.IFolderish
+         redturtle.infocard.interfaces.IRedturtleInfocardLayer
+         plone.dexterity.interfaces.IDexterityFTI"
+    provides="zope.publisher.interfaces.browser.IBrowserPage"
+    factory=".card.AddView"
+    name="Card"
+    />
+  <browser:page
+    for="redturtle.infocard.interfaces.ICard"
+    name="edit"
+    class=".card.EditView"
+    permission="zope2.View"
+  />
+
+  <!-- custom add and edit form for InfoCard -->
+  <adapter
+    for="Products.CMFCore.interfaces.IFolderish
+         redturtle.infocard.interfaces.IRedturtleInfocardLayer
+         plone.dexterity.interfaces.IDexterityFTI"
+    provides="zope.publisher.interfaces.browser.IBrowserPage"
+    factory=".infocard.AddView"
+    name="Infocard"
+    />
+  <browser:page
+    for="redturtle.infocard.interfaces.IInfocard"
+    name="edit"
+    class=".infocard.EditView"
+    permission="zope2.View"
+  />
+
+  <!-- view per le infocard -->
+  <browser:page
+    for="redturtle.infocard.interfaces.IInfocard"
+    name="infocard_view"
+    class=".infocard_view.InfocardView"
+    template="templates/infocard_view.pt"
+    permission="zope2.View"
+    />
+
+  <!-- Vista per il form di ricerca delle infocard -->
+  <browser:page
+    for="redturtle.infocard.interfaces.IInfocardContainer"
+    name="infocardcontainer_searchview"
+    permission="zope2.View"
+    class=".infocardcontainer_search.infocardcontainersearchform_view"
+    />
+
+</configure>

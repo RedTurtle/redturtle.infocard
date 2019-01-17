@@ -1,0 +1,31 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:zcml="http://namespaces.zope.org/zcml"
+  i18n_domain="plone">
+
+  <configure zcml:condition="installed AccessControl.security">
+  <!-- -*- extra stuff goes here -*- -->
+
+    <permission
+        id="redturtle.infocard.AddDefaultCardContainer"
+        title="redturtle.infocard: Add DefaultCardContainer"
+    />
+
+            <permission
+        id="redturtle.infocard.AddCard"
+        title="redturtle.infocard: Add Card"
+    />
+
+    <permission
+        id="redturtle.infocard.AddInfocard"
+        title="redturtle.infocard: Add Infocard"
+    />
+
+    <permission
+        id="redturtle.infocard.AddInfocardContainer"
+        title="redturtle.infocard: Add InfocardContainer"
+    />
+
+  </configure>
+
+</configure>
