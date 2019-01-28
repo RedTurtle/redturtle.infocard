@@ -72,10 +72,7 @@ class InfocardContainerSearchForm(form.SchemaForm):
             if not data.get("recipient") in infocard.recipients:
                 return False
         if data.get("text"):
-            infocard_view = api.content.get_view(
-                "view", infocard, self.request
-            )  # noqa
-            if not data.get("text").lower() in infocard_view.searched_text:
+            if not data.get("text").lower() in infocard.searched_text():
                 return False
         return True
 
@@ -83,22 +80,21 @@ class InfocardContainerSearchForm(form.SchemaForm):
         """
         """
         infocards = self.context.listFolderContents(
-            {"portal_type": "infocard"}
+            {"portal_type": "Infocard"}
         )
         results = []
         for infocard in infocards:
             if self.accept_infocard(infocard, data):
-                infocard_view = api.content.get_view(
-                    "view", infocard, self.request
-                )  # noqa
                 results.append(
                     {
                         "review_state": api.content.get_state(infocard),
                         "url": infocard.absolute_url,
                         "title": infocard.title,
                         "description": infocard.description,
-                        "servicetypes": infocard_view.servicetypes,
-                        "recipients": infocard_view.recipients,
+                        "servicetypes": ", ".join(
+                            sorted(infocard.servicetypes)
+                        ),
+                        "recipients": ", ".join(sorted(infocard.recipients)),
                     }
                 )
         sorted(results, key=lambda x: x["title"])
@@ -114,13 +110,8 @@ class InfocardContainerSearchForm(form.SchemaForm):
             return
         self.results = self.search_results(data)
 
-    @button.buttonAndHandler(_("label_cancel", u"Cancel"))
-    def handleCancel(self, action):
-        """User cancelled. Redirect back to the front page.
-        """
-
 
 infocardcontainersearchform_view = wrap_form(
     InfocardContainerSearchForm,
-    index=ViewPageTemplateFile('templates/infocardcontainer_search.pt')
+    index=ViewPageTemplateFile("templates/infocardcontainer_search.pt"),
 )

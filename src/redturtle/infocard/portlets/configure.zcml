@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:plone="http://namespaces.plone.org/plone"
+    i18n_domain="redturtle.infocard">
+
+  <include package="plone.app.portlets" />
+
+  <plone:portlet
+      name="redturtle.infocard.portlets.InfocardSearchPortlet"
+      interface="redturtle.infocard.portlets.interfaces.IInfocardSearchPortlet"
+      assignment=".search.Assignment"
+      addview=".search.AddForm"
+      editview=".search.EditForm"
+      renderer=".search.Renderer"
+      />
+
+</configure>

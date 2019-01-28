@@ -44,6 +44,7 @@ setup(
         'plone.api>=1.8.4',
         'Products.GenericSetup>=1.8.2',
         'collective.z3cform.datagridfield',
+        'plone.app.tiles',
         'setuptools',
         'z3c.jbot',
     ],

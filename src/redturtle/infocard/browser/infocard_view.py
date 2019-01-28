@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
-from Products.Five.browser import BrowserView
-from plone.memoize.view import memoize
 from plone import api
+from plone.memoize.view import memoize
+from Products.Five.browser import BrowserView
 
 
 class InfocardView(BrowserView):

@@ -53,3 +53,25 @@ class InfocardContainerRecipientsVocabulary(object):
 
 
 InfocardContainerRecipientsFactory = InfocardContainerRecipientsVocabulary()
+
+
+@implementer(IVocabularyFactory)
+class InfoCardContainerVocabulary(object):
+    def __call__(self, context=None):
+        infocardcontainer_list = api.content.find(
+            portal_type="InfocardContainer"
+        )
+
+        infocardcontainer_list = [
+            x.getObject() for x in infocardcontainer_list
+        ]
+
+        terms = [
+            SimpleTerm(value=x.UID(), token=x.UID(), title=x.title)
+            for x in infocardcontainer_list
+        ]
+
+        return SimpleVocabulary(terms)
+
+
+InfoCardContainerVocabularyFactory = InfoCardContainerVocabulary()

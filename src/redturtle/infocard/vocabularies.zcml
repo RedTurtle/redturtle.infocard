@@ -12,4 +12,9 @@
       component=".vocabularies.InfocardContainerRecipientsFactory"
       />
 
+    <utility
+     name="redturtle.infocard.infocartcontainer.vocabulary"
+     component=".vocabularies.InfoCardContainerVocabularyFactory"
+     />
+
 </configure>
