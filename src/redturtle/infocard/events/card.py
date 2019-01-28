@@ -11,7 +11,7 @@ def remove_card(self, event):
         # aggiorno tutte le infocard del container
         infocards = api.content.find(
             context=aq_parent(event.oldParent),
-            portal_type="Infocard"
+            portal_type="InformationCard"
         )
 
         infocards = [x.getObject().updateCards() for x in infocards]

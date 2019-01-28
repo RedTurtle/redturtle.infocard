@@ -44,7 +44,7 @@ class EditForm(edit.DefaultEditForm):
         # value = self.fields["order"].field.defaultFactory(self.context)
         if not api.content.find(
             context=self.context.default, portal_type="Card"
-        ):
+        ) and not api.content.find(context=self.context, portal_type="Card"):
             del self.widgets["order"]
         else:
             self.widgets["order"].allow_reorder = True
@@ -54,7 +54,9 @@ class EditForm(edit.DefaultEditForm):
 
             # hide a column
             self.widgets["order"].columns = [
-                c for c in self.widgets["order"].columns if c["name"] != "uid_card"
+                c
+                for c in self.widgets["order"].columns
+                if c["name"] != "uid_card"
             ]
 
     def datagridUpdateWidgets(self, subform, widgets, widget):

@@ -10,29 +10,21 @@ class InfocardView(BrowserView):
     @property
     @memoize
     def authors(self):
-        """ Show the authors for this infocard
-        """
         return ", ".join(sorted(self.context.infocard_authors()))
 
     @property
     @memoize
     def servicetypes(self):
-        """ Show the authors for this infocard
-        """
         return ", ".join(sorted(self.context.servicetypes))
 
     @property
     @memoize
     def recipients(self):
-        """ Show the authors for this infocard
-        """
         return ", ".join(sorted(self.context.recipients))
 
     @property
     @memoize
     def modified(self):
-        """ Show the authors for this infocard
-        """
         return self.context.modified()
 
     @property

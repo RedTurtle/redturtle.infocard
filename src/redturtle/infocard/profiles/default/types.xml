@@ -2,8 +2,8 @@
 <object name="portal_types" meta_type="Plone Types Tool">
   <property name="title">Controls the available contenttypes in your portal</property>
   <!--<object name="example_ct" meta_type="Dexterity FTI"/>-->
-  <object meta_type="Dexterity FTI" name="InfocardContainer"/>
-  <object meta_type="Dexterity FTI" name="Infocard"/>
+  <object meta_type="Dexterity FTI" name="InformationCardContainer"/>
+  <object meta_type="Dexterity FTI" name="InformationCard"/>
   <object meta_type="Dexterity FTI" name="Card"/>
   <object meta_type="Dexterity FTI" name="DefaultCardContainer"/>
 </object>

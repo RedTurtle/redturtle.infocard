@@ -59,7 +59,7 @@ InfocardContainerRecipientsFactory = InfocardContainerRecipientsVocabulary()
 class InfoCardContainerVocabulary(object):
     def __call__(self, context=None):
         infocardcontainer_list = api.content.find(
-            portal_type="InfocardContainer"
+            portal_type="InformationCardContainer"
         )
 
         infocardcontainer_list = [
