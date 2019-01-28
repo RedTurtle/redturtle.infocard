@@ -12,7 +12,7 @@ class InfocardView(BrowserView):
     def authors(self):
         """ Show the authors for this infocard
         """
-        return ", ".join(sorted(getattr(self.context, "infocard_authors", "")))
+        return ", ".join(sorted(self.context.infocard_authors()))
 
     @property
     @memoize

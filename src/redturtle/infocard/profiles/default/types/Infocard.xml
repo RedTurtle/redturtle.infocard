@@ -7,7 +7,7 @@
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">Infocard</property>
+      name="title">InformationCard</property>
   <property
       i18n:translate=""
       name="description"></property>

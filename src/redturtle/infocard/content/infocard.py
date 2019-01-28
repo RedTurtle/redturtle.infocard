@@ -36,6 +36,14 @@ class Infocard(Container):
                 return False
         return True
 
+    def infocard_authors(self):
+        authors = [
+            list(api.content.get(UID=x["uid_card"]).creators)
+            for x in self.getCards()
+        ]
+        authors = [item for sublist in authors for item in sublist]
+        return list(set(authors))
+
     @property
     def order(self):
         ul = []
