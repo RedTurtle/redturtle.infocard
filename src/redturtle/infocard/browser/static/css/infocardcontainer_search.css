@@ -16,16 +16,8 @@
   .SearchInfocardContainer form .field select {
     width: 90%; }
 .SearchInfocardContainer div.field.error {
-  background-color: #EC9C8D;
   padding: 15px;
-  margin-bottom: 20px;
-  box-shadow: none;
-  border: 1px solid #eb9484;
-  border-radius: 4px; }
-.SearchInfocardContainer div.field.error div.error {
-  color: #a94442; }
-.SearchInfocardContainer div.field.error div.error:before {
-  line-height: 14px; }
+  margin-bottom: 20px; }
 .SearchInfocardContainer #content-core table.dataTable tr.odd td {
   background-color: #eee; }
 .SearchInfocardContainer #content-core table.dataTable tr.even td {
