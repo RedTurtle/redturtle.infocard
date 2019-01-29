@@ -11,6 +11,12 @@
       float: left;
       clear: none;
 
+      @media (max-width: 767px) {
+        width: 100%;
+        float: none;
+        clear: both;
+      }
+
       input,
       select {
         width: 90%;

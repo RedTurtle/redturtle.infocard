@@ -8,6 +8,11 @@
   min-width: 200px;
   float: left;
   clear: none; }
+  @media (max-width: 767px) {
+    .SearchInfocardContainer form .field {
+      width: 100%;
+      float: none;
+      clear: both; } }
   .SearchInfocardContainer form .field input,
   .SearchInfocardContainer form .field select {
     width: 90%; }
