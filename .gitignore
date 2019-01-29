@@ -23,7 +23,6 @@ var/
 lib64
 log.html
 output.xml
-package.json
 pip-selfcheck.json
 report.html
 .vscode/

@@ -6,9 +6,6 @@
       metal:use-macro="context/main_template/macros/master"
       i18n:domain="redturtle.infocard">
   <body>
-    <metal:block metal:fill-slot="style_slot">
-      <link rel='stylesheet' tal:attributes="href string:${portal_url}/++plone++redturtle.infocard/css/infocard.css">
-    </metal:block>
     <metal:content-description metal:fill-slot="content-description"></metal:content-description>
     <metal:main fill-slot="content-core">
       <metal:content-core define-macro="content-core">

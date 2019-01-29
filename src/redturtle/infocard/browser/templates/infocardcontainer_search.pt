@@ -10,9 +10,6 @@
                              foo python:request.set('disable_plone.rightcolumn', 1);
                             ">
     </metal:block>
-    <metal:block metal:fill-slot="style_slot">
-      <link rel='stylesheet' tal:attributes="href string:${portal_url}/++plone++redturtle.infocard/css/infocardcontainer_search.css">
-    </metal:block>
 
     <metal:block fill-slot="content-core">
         <div id="content-core" class="SearchInfocardContainer">
