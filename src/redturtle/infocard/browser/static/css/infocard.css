@@ -11,8 +11,7 @@ table.TableInfocard {
       text-align: left;
       border: 0 none;
       padding: 8px;
-      line-height: 1.5;
-      vertical-align: top; }
+      line-height: 1.5; }
     table.TableInfocard > tbody > tr > th {
       width: 30%; }
     table.TableInfocard > tbody > tr > td {
