@@ -1,25 +1,21 @@
 /* rg.infocard search styles */
-.listing.collection-listing {
+.SearchInfocardContainer .listing.collection-listing {
   width: 100%;
   margin: auto; }
-
-div.formControls {
+.SearchInfocardContainer div.formControls {
   margin: 0;
   margin-top: 1.35em;
   width: 100%;
   float: none;
   clear: both; }
-
-.formControls > input {
+.SearchInfocardContainer .formControls > input {
   margin-right: 1em; }
-
-#content-core form .field {
+.SearchInfocardContainer #content-core form .field {
   width: 25%;
   min-width: 200px;
   float: left;
   clear: none; }
-
-div.field.error {
+.SearchInfocardContainer div.field.error {
   background-color: #f2dede;
   border: none;
   padding: 15px;
@@ -30,34 +26,26 @@ div.field.error {
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px; }
-
-div.field.error div.error {
+.SearchInfocardContainer div.field.error div.error {
   color: #a94442; }
-
-div.field.error div.error:before {
+.SearchInfocardContainer div.field.error div.error:before {
   line-height: 14px; }
-
-#content-core .field input,
-#content-core .field select {
+.SearchInfocardContainer #content-core .field input,
+.SearchInfocardContainer #content-core .field select {
   width: 90%; }
-
-#content-core table.dataTable tr.odd td {
+.SearchInfocardContainer #content-core table.dataTable tr.odd td {
   background-color: #eee; }
-
-#content-core table.dataTable tr.even td {
+.SearchInfocardContainer #content-core table.dataTable tr.even td {
   background-color: #FFF; }
-
-div.dataTables_wrapper .dataTables_filter {
+.SearchInfocardContainer div.dataTables_wrapper .dataTables_filter {
   float: none;
   text-align: left;
   margin-top: 1em;
   margin-bottom: 0.5em; }
-
-div.dataTables_wrapper .dataTables_filter input {
+.SearchInfocardContainer div.dataTables_wrapper .dataTables_filter input {
   width: 100%;
   margin-left: 0; }
-
-#content a.link-overlay {
+.SearchInfocardContainer #content a.link-overlay {
   border-bottom: none !important; }
 
 /*# sourceMappingURL=infocardcontainer_search.css.map */
