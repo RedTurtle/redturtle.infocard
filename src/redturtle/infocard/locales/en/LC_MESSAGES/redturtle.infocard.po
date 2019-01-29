@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2019-01-28 12:53+0000\n"
+"POT-Creation-Date: 2019-01-29 22:57+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: ../profiles/default/types/Card.xml
 #: ../profiles/default/types/DefaultCardContainer.xml
-#: ../profiles/default/types/Infocard.xml
+#: ../profiles/default/types/InformationCard.xml
 msgid "Edit"
 msgstr ""
 
@@ -40,16 +40,16 @@ msgstr ""
 msgid "Edit Recent Portlet"
 msgstr ""
 
-#: ../profiles/default/types/Infocard.xml
-msgid "Infocard"
-msgstr ""
-
 #: ../tiles/configure.zcml:17
 msgid "Infocard Search"
 msgstr ""
 
-#: ../profiles/default/types/InfocardContainer.xml
-msgid "InfocardContainer"
+#: ../profiles/default/types/InformationCard.xml
+msgid "InformationCard"
+msgstr ""
+
+#: ../profiles/default/types/InformationCardContainer.xml
+msgid "InformationCardContainer"
 msgstr ""
 
 #: ../configure.zcml:32
@@ -102,7 +102,7 @@ msgstr ""
 
 #: ../profiles/default/types/Card.xml
 #: ../profiles/default/types/DefaultCardContainer.xml
-#: ../profiles/default/types/Infocard.xml
+#: ../profiles/default/types/InformationCard.xml
 msgid "View"
 msgstr ""
 

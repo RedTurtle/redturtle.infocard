@@ -80,7 +80,7 @@ class InfocardContainerSearchForm(form.SchemaForm):
         """
         """
         infocards = self.context.listFolderContents(
-            {"portal_type": "Infocard"}
+            {"portal_type": "InformationCard"}
         )
         results = []
         for infocard in infocards:
