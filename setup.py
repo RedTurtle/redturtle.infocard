@@ -45,6 +45,8 @@ setup(
         'Products.GenericSetup>=1.8.2',
         'collective.z3cform.datagridfield',
         'plone.app.tiles',
+        'plone.app.standardtiles',
+        'redturtle.tiles.management',
         'setuptools',
         'z3c.jbot',
     ],

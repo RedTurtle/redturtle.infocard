@@ -41,7 +41,7 @@
          plone.dexterity.interfaces.IDexterityFTI"
     provides="zope.publisher.interfaces.browser.IBrowserPage"
     factory=".infocard.AddView"
-    name="Infocard"
+    name="InformationCard"
     />
   <browser:page
     for="redturtle.infocard.interfaces.IInfocard"

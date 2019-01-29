@@ -48,7 +48,7 @@ class ICardOrder(Interface):
 def getInfoCardList(context):
     # viene chiamata durante l'inserimento di una infocard
 
-    cards = api.content.find(context=context, portal_type="Card")
+    cards = api.content.find(context=context.default, portal_type="Card")
     cards = [x.getObject() for x in cards]
     return [
         {"publish": True, "title_card": x.title, "uid_card": x.UID()}

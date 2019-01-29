@@ -1,36 +1,35 @@
 <?xml version="1.0"?>
 <object xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-    name="InfocardContainer"
+    name="InformationCard"
     meta_type="Dexterity FTI"
     i18n:domain="redturtle.infocard">
 
   <!-- Basic properties -->
   <property
       i18n:translate=""
-      name="title">InfocardContainer</property>
+      name="title">InformationCard</property>
   <property
       i18n:translate=""
       name="description"></property>
 
   <property name="allow_discussion">False</property>
-  <property name="factory">InfocardContainer</property>
+  <property name="factory">InformationCard</property>
   <property name="icon_expr"></property>
   <property name="link_target"></property>
 
   <!-- Hierarchy control -->
-  <property name="global_allow">True</property>
+  <property name="global_allow">False</property>
   <property name="filter_content_types">True</property>
   <property name="allowed_content_types">
-    <element value="DefaultCardContainer" />
-    <element value="Infocard" />
+    <element value="Card" />
   </property>
 
   <!-- Schema, class and security -->
-  <property name="add_permission">redturtle.infocard.AddInfocardContainer</property>
-  <property name="klass">redturtle.infocard.content.infocard_container.InfocardContainer</property>
+  <property name="add_permission">redturtle.infocard.AddInfocard</property>
+  <property name="klass">redturtle.infocard.content.infocard.Infocard</property>
   <property name="model_file"></property>
   <property name="model_source"></property>
-  <property name="schema">redturtle.infocard.interfaces.IInfocardContainer</property>
+  <property name="schema">redturtle.infocard.interfaces.IInfocard</property>
 
   <!-- Enabled behaviors -->
   <property name="behaviors" purge="false">
@@ -52,10 +51,10 @@
   </property>
 
   <!-- View information -->
-  <property name="add_view_expr">string:${folder_url}/++add++InfocardContainer</property>
-  <property name="default_view">infocardcontainer_searchview</property>
+  <property name="add_view_expr">string:${folder_url}/++add++InformationCard</property>
+  <property name="default_view">infocard_view</property>
   <property name="default_view_fallback">False</property>
-  <property name="immediate_view">infocardcontainer_searchview</property>
+  <property name="immediate_view">infocard_view</property>
   <property name="view_methods">
   </property>
 
