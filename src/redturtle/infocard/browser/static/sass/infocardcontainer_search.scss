@@ -21,24 +21,6 @@
         width:90%;
       }
     }
-    div.field.error {
-      background-color: #f2dede;
-      border: none;
-      padding: 15px;
-      margin: 30px;
-      font-size:inherit;
-      box-shadow: none;
-      border: 1px solid #ebccd1;
-      -webkit-border-radius: 4px;
-      -moz-border-radius: 4px;
-      border-radius: 4px;
-    }
-    div.field.error div.error {
-      color: #a94442;
-    }
-    div.field.error div.error:before {
-      line-height: 14px;
-    }
 
     #content-core table.dataTable tr.odd td {
       background-color: #eee;
