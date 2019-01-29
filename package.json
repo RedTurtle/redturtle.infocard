@@ -20,6 +20,8 @@
     "grunt-postcss": "^0.9.0",
     "less-plugin-inline-urls": "^1.2.0",
     "load-grunt-tasks": "^3.5.2",
-    "postcss-flexbugs-fixes": "^4.1.0"
+    "postcss-flexbugs-fixes": "^4.1.0",
+    "grunt-sass": "^3.0.1",
+    "node-sass": "^4.9.3"
   }
 }
