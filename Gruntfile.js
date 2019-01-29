@@ -46,7 +46,7 @@ module.exports = function(grunt) {
     watch: {
       css: {
         files: `${productRoot}/infocard.css`,
-        tasks: ['postcss', 'cssmin'],
+        tasks: ['sass', 'postcss', 'cssmin'],
         options: {
           livereload: true
         }
