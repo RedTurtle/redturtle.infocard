@@ -4,7 +4,6 @@
   <!-- BUNDLE REGISTRATION AS RESOURCE -->
   <records prefix="plone.resources/infocard-bundle"
         interface='Products.CMFPlone.interfaces.IResourceRegistry'>
-    <value key="js"></value>
     <value key="css">
       <element>++plone++redturtle.infocard/infocard.css</element>
     </value>
@@ -17,7 +16,6 @@
     <value key="resources" purge="false">
       <element>infocard-bundle</element>
     </value>
-    <value key="jscompilation"></value>
     <value key="csscompilation">++plone++redturtle.infocard/infocard-compiled.css</value>
     <value key="last_compilation">2019-01-29 00:00:00</value>
     <value key="compile">True</value>
