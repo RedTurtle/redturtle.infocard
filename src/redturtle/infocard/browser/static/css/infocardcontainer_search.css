@@ -7,11 +7,14 @@
   width: 100%;
   float: none;
   clear: both; }
-.SearchInfocardContainer #content-core form .field {
+.SearchInfocardContainer form .field {
   width: 25%;
   min-width: 200px;
   float: left;
   clear: none; }
+  .SearchInfocardContainer form .field input,
+  .SearchInfocardContainer form .field select {
+    width: 90%; }
 .SearchInfocardContainer div.field.error {
   background-color: #f2dede;
   border: none;
@@ -27,9 +30,6 @@
   color: #a94442; }
 .SearchInfocardContainer div.field.error div.error:before {
   line-height: 14px; }
-.SearchInfocardContainer #content-core .field input,
-.SearchInfocardContainer #content-core .field select {
-  width: 90%; }
 .SearchInfocardContainer #content-core table.dataTable tr.odd td {
   background-color: #eee; }
 .SearchInfocardContainer #content-core table.dataTable tr.even td {
