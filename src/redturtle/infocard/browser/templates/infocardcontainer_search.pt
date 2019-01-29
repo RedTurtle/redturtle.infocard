@@ -12,7 +12,7 @@
     </metal:block>
 
     <metal:block fill-slot="content-core">
-        <div id="content-core">
+        <div id="content-core" class="SearchInfocardContainer">
           <div tal:condition="context/introduction" tal:content="structure context/introduction/output">
             Rich text field for infocard container
           </div>

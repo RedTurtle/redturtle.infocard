@@ -1,5 +1,25 @@
 <?xml version="1.0"?>
 <registry>
-<!-- -*- extra stuff goes here -*- -->
+
+  <!-- BUNDLE REGISTRATION AS RESOURCE -->
+  <records prefix="plone.resources/infocard-bundle"
+        interface='Products.CMFPlone.interfaces.IResourceRegistry'>
+    <value key="css">
+      <element>++plone++redturtle.infocard/infocard.css</element>
+    </value>
+  </records>
+
+  <!-- BUNDLE -->
+  <records prefix="plone.bundles/redturtle-infocard"
+            interface='Products.CMFPlone.interfaces.IBundleRegistry'>
+    <value key="enabled">True</value>
+    <value key="resources" purge="false">
+      <element>infocard-bundle</element>
+    </value>
+    <value key="csscompilation">++plone++redturtle.infocard/infocard-compiled.css</value>
+    <value key="last_compilation">2019-01-29 00:00:00</value>
+    <value key="compile">True</value>
+    <value key="depends">plone</value>
+  </records>
 
 </registry>

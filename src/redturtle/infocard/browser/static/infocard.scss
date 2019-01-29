@@ -1,0 +1,71 @@
+/* infocard styles */
+table.TableInfocard {
+    width: 100%;
+    margin: auto;
+    border: 0 none;
+    background-color: transparent;
+    border-radius: 0;
+
+    & > tbody {
+      & > tr {
+        vertical-align: top;
+        & > th,
+        & > td {
+          text-align: left;
+          border: 0 none;
+          padding: 8px;
+          line-height: 1.5;
+        }
+        & > th {
+          width: 30%;
+        }
+        & > td {
+          width: 70%;
+          & > p:last-child {
+            margin-bottom:0;
+          }
+        }
+      }
+    }
+
+    table {
+      font-size: 0.9em;
+    }
+}
+
+/* infocard container search styles */
+.SearchInfocardContainer {
+  div.formControls {
+    margin: 0;
+    width: 100%;
+    float: none;
+    clear: both;
+  }
+  form .field {
+    width: 25%;
+    min-width: 200px;
+    float: left;
+    clear: none;
+
+    @media (max-width: 767px) {
+      width: 100%;
+      float: none;
+      clear: both;
+    }
+
+    input,
+    select {
+      width: 90%;
+    }
+  }
+  div.field.error {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+  .listing.collection-listing {
+    width: 100%;
+    margin: auto;
+    background-color: transparent;
+  }
+}
+
