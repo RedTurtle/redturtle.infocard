@@ -1,9 +1,5 @@
 /* rg.infocard search styles */
 .SearchInfocardContainer {
-    .listing.collection-listing {
-      width:100%;
-      margin:auto;
-    }
     div.formControls {
       margin: 1.35em 0 0;
       width: 100%;
@@ -25,7 +21,11 @@
       padding: 15px;
       margin-bottom: 20px;
     }
-
+    .listing.collection-listing {
+      width: 100%;
+      margin: auto;
+      background-color: transparent;
+    }
     #content-core table.dataTable tr.odd td {
       background-color: #eee;
     }
