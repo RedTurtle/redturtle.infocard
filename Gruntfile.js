@@ -4,6 +4,16 @@ module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
   var productRoot = 'src/redturtle/infocard/browser/static';
   grunt.initConfig({
+    sass: {                              // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          style: 'expanded',
+        },
+        files: {                         // Dictionary of files
+          './src/redturtle/infocard/browser/static/infocard.css': `${productRoot}/infocard.scss`,
+        },
+      },
+    },
     cssmin: {
       target: {
         files: {
@@ -45,5 +55,5 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('default', ['watch']);
-  grunt.registerTask('compile', ['postcss', 'cssmin']);
+  grunt.registerTask('compile', ['sass','postcss', 'cssmin']);
 };
