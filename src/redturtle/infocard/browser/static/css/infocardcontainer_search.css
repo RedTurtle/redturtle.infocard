@@ -1,4 +1,3 @@
-/* rg.infocard search styles */
 .SearchInfocardContainer div.formControls {
   margin: 1.35em 0 0;
   width: 100%;
@@ -19,19 +18,5 @@
   width: 100%;
   margin: auto;
   background-color: transparent; }
-.SearchInfocardContainer #content-core table.dataTable tr.odd td {
-  background-color: #eee; }
-.SearchInfocardContainer #content-core table.dataTable tr.even td {
-  background-color: #FFF; }
-.SearchInfocardContainer div.dataTables_wrapper .dataTables_filter {
-  float: none;
-  text-align: left;
-  margin-top: 1em;
-  margin-bottom: 0.5em; }
-.SearchInfocardContainer div.dataTables_wrapper .dataTables_filter input {
-  width: 100%;
-  margin-left: 0; }
-.SearchInfocardContainer #content a.link-overlay {
-  border-bottom: none !important; }
 
 /*# sourceMappingURL=infocardcontainer_search.css.map */
