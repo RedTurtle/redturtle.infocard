@@ -49,13 +49,12 @@ module.exports = function(grunt) {
       },
     },
     watch: {
-      css: {
-        files: `${productRoot}/infocards.scss`,
+      styles: {
+        files: [
+          './src/redturtle/infocard/browser/static/*.scss',
+        ],
         tasks: ['sass', 'postcss', 'cssmin'],
-        options: {
-          livereload: true
-        }
-      }
+      },
     }
 
   });
