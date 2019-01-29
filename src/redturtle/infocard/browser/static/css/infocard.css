@@ -1,0 +1,25 @@
+/* infocard styles */
+#content-core > table.TableInfocard {
+  width: 100%;
+  margin: auto;
+  border: 0 none;
+  background-color: transparent;
+  border-radius: 0; }
+  #content-core > table.TableInfocard > tbody > tr {
+    vertical-align: top; }
+    #content-core > table.TableInfocard > tbody > tr > th, #content-core > table.TableInfocard > tbody > tr > td {
+      text-align: left;
+      border: 0 none;
+      padding: 8px;
+      line-height: 1.5;
+      vertical-align: top; }
+    #content-core > table.TableInfocard > tbody > tr > th {
+      width: 30%; }
+    #content-core > table.TableInfocard > tbody > tr > td {
+      width: 70%; }
+      #content-core > table.TableInfocard > tbody > tr > td > p:last-child {
+        margin-bottom: 0; }
+  #content-core > table.TableInfocard table {
+    font-size: 0.9em; }
+
+/*# sourceMappingURL=infocard.css.map */
