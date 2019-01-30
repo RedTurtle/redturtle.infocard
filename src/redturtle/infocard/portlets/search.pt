@@ -11,7 +11,7 @@
         <span class="portletTopRight"></span>
     </dt>
     <dd class="portletItem">
-      <div tal:condition="view/text_before" tal:content="structure view/text_before"></div>
+      <div tal:condition="view/text_before" tal:content="structure view/text_before/raw"></div>
       <div>
         <form class="enableUnloadProtection" method="get" enctype="multipart/form-data"
           tal:attributes="action python:view.target.absolute_url()">
@@ -54,7 +54,7 @@
           </tal:display_filters>
         </form>
       </div>
-      <div tal:condition="view/text_after" tal:content="structure view/text_after"></div>
+      <div tal:condition="view/text_after" tal:content="structure view/text_after/raw"></div>
       <div class="visualClear"></div>
     </dd>
     <dd class="portletFooter">
