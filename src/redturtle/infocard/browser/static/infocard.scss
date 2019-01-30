@@ -70,24 +70,10 @@ table.TableInfocard {
 }
 
 .portlet.infocardPortletSearch {
-    border: 0 none;
-    border-radius: 0;
-    box-shadow: none;
 
-    .portletHeader {
-      border-radius: 0;
-      background-color: transparent;
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    .portletItem {
-      > div {
-        margin-bottom: 1rem;
-      }
-
+    .portletContent {
       form {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
         .field {
           margin-bottom: 1rem;
           label {
