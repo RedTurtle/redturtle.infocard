@@ -69,12 +69,22 @@
 
   <browser:page
       for="redturtle.infocard.interfaces.IDefaultCardContainer"
-      name="default_card_container"
+      name="default_card_container_view"
       class="plone.dexterity.browser.view.DefaultView"
       template="templates/defaultcardcontainer_view.pt"
       permission="zope2.View"
       menu="plone_displayviews"
       title="View Default Card Container"
+      />
+
+  <browser:page
+      for="redturtle.infocard.interfaces.ICard"
+      name="card_view"
+      class="plone.dexterity.browser.view.DefaultView"
+      template="templates/card_view.pt"
+      permission="zope2.View"
+      menu="plone_displayviews"
+      title="View Card"
       />
 
 </configure>
