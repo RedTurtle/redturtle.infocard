@@ -57,9 +57,5 @@
       <div tal:condition="view/text_after" tal:content="structure view/text_after/raw"></div>
       <div class="visualClear"></div>
     </section>
-    <footer class="portletFooter">
-        <span class="portletBottomLeft"></span>
-        <span class="portletBottomRight"></span>
-    </footer>
   </section>
 </html>
