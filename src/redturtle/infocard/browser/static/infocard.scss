@@ -100,15 +100,25 @@ table.TableInfocard {
       margin-bottom: 1rem;
       .field {
         margin-bottom: 1rem;
+        display: flex;
         label {
           font-weight: 600;
           margin-bottom: 0.5rem;
           display: block;
+          width: 20%;
         }
         input,
         select {
-          width: 100%;
-          max-width: 100%;
+          width: 30%;
+        }
+        @media (max-width: 767px) {
+          display: block;
+          label,
+          input,
+          select {
+            width: 100%;
+            max-width: 100%;
+          }
         }
       }
     }

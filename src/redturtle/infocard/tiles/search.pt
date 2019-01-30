@@ -22,12 +22,12 @@
           <tal:display_filters tal:condition="view/display_filters">
             <tal:define>
               <div class="field" data-fieldname="form.widgets.text">
-                <label for="form-widgets-servicetype" class="horizontal" style="display:inline-block;width:48%" i18n:translate="label_search_text">Search text</label>
-                <input class="searchField portlet-search-gadget" name="form.widgets.text" value="" type="text" size="15" style="width:48%" />
+                <label for="form-widgets-servicetype" class="horizontal" i18n:translate="label_search_text">Search text</label>
+                <input class="searchField portlet-search-gadget" name="form.widgets.text" value="" type="text" size="15" />
               </div>
               <div class="field" data-fieldname="form.widgets.servicetype">
-                <label for="form-widgets-servicetype" class="horizontal" style="display:inline-block;width:48%" i18n:translate="label_servicetype">Service type</label>
-                <select name="form.widgets.servicetype:list" class="select-widget choice-field" size="1" style="width:48%">
+                <label for="form-widgets-servicetype" class="horizontal" i18n:translate="label_servicetype">Service type</label>
+                <select name="form.widgets.servicetype:list" class="select-widget choice-field" size="1">
                   <option value="--NOVALUE--">-</option>
                   <tal:repeat repeat="servicetype view/servicetypes">
                     <option tal:attributes="value servicetype/token" tal:content="servicetype/title">Casa</option>
@@ -35,10 +35,10 @@
                 </select>
               </div>
               <div class="field" data-fieldname="form.widgets.recipient" id="formfield-form-widgets-recipient">
-                <label for="form-widgets-recipient" class="horizontal" style="display:inline-block;width:48%" i18n:translate="label_for_who_is_it">
+                <label for="form-widgets-recipient" class="horizontal" i18n:translate="label_for_who_is_it">
                   For who is it?
                 </label>
-                <select name="form.widgets.recipient:list" class="select-widget choice-field" style="width:48%" size="1">
+                <select name="form.widgets.recipient:list" class="select-widget choice-field" size="1">
                   <option value="--NOVALUE--">-</option>
                   <tal:repeat repeat="recipient view/recipients">
                     <option tal:attributes="value recipient/token" tal:content="recipient/title">Casa</option>
