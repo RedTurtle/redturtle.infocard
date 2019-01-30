@@ -10,11 +10,7 @@
 <metal:main fill-slot="content-core">
 <metal:content-core define-macro="content-core">
 
-  <tal:block repeat="widget view/widgets/values">
-    <tal:block tal:condition="python:widget.__name__ not in ('IBasic.title', 'IBasic.description', 'title', 'description',)">
-      <tal:widget tal:replace="structure widget/@@ploneform-render-widget"/>
-    </tal:block>
-  </tal:block>
+  <div tal:condition="context/text" tal:replace="structure context/text/output">
 
 </metal:content-core>
 </metal:main>
