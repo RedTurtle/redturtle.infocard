@@ -4,13 +4,13 @@
   xmlns:i18n="http://xml.zope.org/namespaces/i18n"
   i18n:domain="rg.infocard"
   >
-  <dl class="portlet portletSearch infocardPortletSearch" tal:condition="view/available">
-    <dt class="portletHeader" tal:condition="view/display_title">
+  <section class="portlet portletSearch infocardPortletSearch" tal:condition="view/available">
+    <header class="portletHeader" tal:condition="view/display_title">
         <span class="portletTopLeft"></span>
         <a class="tile" tal:attributes="href view/get_url" tal:content="view/data/name"></a>
         <span class="portletTopRight"></span>
-    </dt>
-    <dd class="portletItem">
+    </header>
+    <section class="portletContent">
       <div tal:condition="view/text_before" tal:content="structure view/text_before/raw"></div>
       <div>
         <form class="enableUnloadProtection" method="get" enctype="multipart/form-data"
@@ -56,10 +56,10 @@
       </div>
       <div tal:condition="view/text_after" tal:content="structure view/text_after/raw"></div>
       <div class="visualClear"></div>
-    </dd>
-    <dd class="portletFooter">
+    </section>
+    <footer class="portletFooter">
         <span class="portletBottomLeft"></span>
         <span class="portletBottomRight"></span>
-    </dd>
-  </dl>
+    </footer>
+  </section>
 </html>
