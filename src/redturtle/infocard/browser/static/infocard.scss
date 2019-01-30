@@ -96,6 +96,9 @@ table.TableInfocard {
 
 .tile.infocardTileSearch {
   margin-bottom: 30px;
+  .tileTitle {
+    margin: 25px 0 12.5px;
+  }
   .tileBody {
     > div {
       margin-bottom: 1rem;
