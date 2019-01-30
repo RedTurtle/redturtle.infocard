@@ -70,7 +70,6 @@ table.TableInfocard {
 }
 
 .portlet.infocardPortletSearch {
-
     .portletContent {
       form {
         margin-bottom: 1rem;
@@ -89,4 +88,29 @@ table.TableInfocard {
         }
       }
     }
+}
+
+.tile.infocardTileSearch {
+  margin-bottom: 30px;
+  .tileBody {
+    > div {
+      margin-bottom: 1rem;
+    }
+    form {
+      margin-bottom: 1rem;
+      .field {
+        margin-bottom: 1rem;
+        label {
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          display: block;
+        }
+        input,
+        select {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }
