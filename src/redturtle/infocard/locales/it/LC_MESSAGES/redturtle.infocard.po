@@ -50,7 +50,7 @@ msgstr "Scheda Informativa"
 
 #: ../profiles/default/types/InformationCardContainer.xml
 msgid "InformationCardContainer"
-msgstr "Contenitore di schede informative"
+msgstr "Contenitore Schede Informative"
 
 #: ../configure.zcml:32
 msgid "Installs the redturtle.infocard add-on."
@@ -66,7 +66,7 @@ msgstr "Pubblica"
 
 #: ../portlets/interfaces.py:29
 msgid "Target infocard container"
-msgstr "Contenitore di Infocard puntato"
+msgstr "Contenitore di schede informative puntato"
 
 #: ../portlets/interfaces.py:58
 msgid "Text after search fields"
