@@ -11,22 +11,24 @@ class AddForm(add.DefaultAddForm):
         super(AddForm, self).updateWidgets()
 
         # value = self.fields["order"].field.defaultFactory(self.context)
-        if not api.content.find(
-            context=self.context.default, portal_type="Card"
-        ):
-            del self.widgets["order"]
-        else:
-            self.widgets["order"].allow_reorder = True
-            self.widgets["order"].allow_insert = False
-            self.widgets["order"].allow_delete = False
-            self.widgets["order"].auto_append = False
+        # if not api.content.find(
+        #     context=self.context.default, portal_type="Card"
+        # ):
+        #     del self.widgets["order"]
+        # else:
+        #     self.widgets["order"].allow_reorder = True
+        #     self.widgets["order"].allow_insert = False
+        #     self.widgets["order"].allow_delete = False
+        #     self.widgets["order"].auto_append = False
+        #
+        #     # hide a column
+        #     self.widgets["order"].columns = [
+        #         c
+        #         for c in self.widgets["order"].columns
+        #         if c["name"] != "uid_card"
+        #     ]
 
-            # hide a column
-            self.widgets["order"].columns = [
-                c
-                for c in self.widgets["order"].columns
-                if c["name"] != "uid_card"
-            ]
+        del self.widgets["order"]
 
     def datagridUpdateWidgets(self, subform, widgets, widget):
         subform.widgets["title_card"].mode = DISPLAY_MODE
@@ -42,9 +44,24 @@ class EditForm(edit.DefaultEditForm):
         super(EditForm, self).updateWidgets()
 
         # value = self.fields["order"].field.defaultFactory(self.context)
-        if not api.content.find(
-            context=self.context.default, portal_type="Card"
-        ) and not api.content.find(context=self.context, portal_type="Card"):
+        # if not api.content.find(
+        #     context=self.context.default, portal_type="Card"
+        # ) and not api.content.find(context=self.context, portal_type="Card"):
+        #     del self.widgets["order"]
+        # else:
+        #     self.widgets["order"].allow_reorder = True
+        #     self.widgets["order"].allow_insert = False
+        #     self.widgets["order"].allow_delete = False
+        #     self.widgets["order"].auto_append = False
+        #
+        #     # hide a column
+        #     self.widgets["order"].columns = [
+        #         c
+        #         for c in self.widgets["order"].columns
+        #         if c["name"] != "uid_card"
+        #     ]
+
+        if not api.content.find(context=self.context, portal_type="Card"):
             del self.widgets["order"]
         else:
             self.widgets["order"].allow_reorder = True

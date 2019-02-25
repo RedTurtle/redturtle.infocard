@@ -44,16 +44,16 @@ class ICardOrder(Interface):
     uid_card = schema.ASCIILine(title=_("Uid card"), required=False)
 
 
-@provider(IContextAwareDefaultFactory)
-def getInfoCardList(context):
-    # viene chiamata durante l'inserimento di una infocard
-
-    cards = api.content.find(context=context.default, portal_type="Card")
-    cards = [x.getObject() for x in cards]
-    return [
-        {"publish": True, "title_card": x.title, "uid_card": x.UID()}
-        for x in cards
-    ]
+# @provider(IContextAwareDefaultFactory)
+# def getInfoCardList(context):
+#     # viene chiamata durante l'inserimento di una infocard
+#
+#     cards = api.content.find(context=context.default, portal_type="Card")
+#     cards = [x.getObject() for x in cards]
+#     return [
+#         {"publish": True, "title_card": x.title, "uid_card": x.UID()}
+#         for x in cards
+#     ]
 
 
 class IInfocardContainer(model.Schema):
@@ -127,7 +127,7 @@ class IInfocard(Interface):
         title=_(u"Cards"),
         required=False,
         value_type=DictRow(title=u"Card", schema=ICardOrder),
-        defaultFactory=getInfoCardList,
+        # defaultFactory=getInfoCardList,
         missing_value=[],
     )
     form.widget(order=DataGridFieldFactory)

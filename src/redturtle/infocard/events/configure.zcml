@@ -12,6 +12,12 @@
       />
 
     <subscriber
+      for="redturtle.infocard.interfaces.IInfocard
+            zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".infocard.copy_default_card"
+      />
+
+    <subscriber
       for="redturtle.infocard.interfaces.ICard
            zope.lifecycleevent.interfaces.IObjectRemovedEvent"
       handler=".card.remove_card"

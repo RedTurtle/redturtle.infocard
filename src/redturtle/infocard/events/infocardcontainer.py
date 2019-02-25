@@ -13,4 +13,3 @@ def add_new_infocardcontainer(self, event):
     default = api.content.create(
         container=event.object, type="DefaultCardContainer", title="Default"
     )
-    # api.content.transition(obj=default, transition="publish")
