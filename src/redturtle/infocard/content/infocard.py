@@ -24,10 +24,6 @@ class Infocard(Container):
         cards_list.extend(
             api.content.find(context=infocard, portal_type="Card")
         )
-        # non devo prenderlo da dentro il padre
-        # cards_list.extend(
-        #     api.content.find(context=infocard.default, portal_type="Card")
-        # )
         cards_list = [x.getObject() for x in cards_list]
         return [{"publish": True, "uid_card": x.UID()} for x in cards_list]
 

@@ -23,4 +23,10 @@
       handler=".card.remove_card"
       />
 
+    <subscriber
+      for="redturtle.infocard.interfaces.ICard
+            zope.lifecycleevent.interfaces.IObjectAddedEvent"
+      handler=".card.add_card"
+      />
+
 </configure>

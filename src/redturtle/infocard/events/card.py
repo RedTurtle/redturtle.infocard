@@ -10,20 +10,24 @@ def remove_card(self, event):
     Al momento della creazione di una card viene aggiornata la posizione delle
     Card
     """
-
-    # if isinstance(event.oldParent, DefaultCardContainer):
-    #     # aggiorno tutte le infocard del container
-    #     infocards = api.content.find(
-    #         context=aq_parent(event.oldParent),
-    #         portal_type="InformationCard"
-    #     )
-    #
-    #     infocards = [x.getObject().updateCards() for x in infocards]
-    #
-    # elif isinstance(event.oldParent, Infocard):
-    #     # aggiorno solo l'infocard interessata
-    #     event.oldParent.updateCards()
-
     if isinstance(event.oldParent, Infocard):
-        # aggiorno solo l'infocard interessata
         event.oldParent.updateCards()
+
+
+def add_card(self, event):
+    """
+    Quando viene aggiunta una card, se si trova all'interno di una cartella di
+    default, allora viene copiata in tutte le infocard
+    """
+    parent = aq_parent(self)
+    if isinstance(parent, DefaultCardContainer):
+
+        # aggiungo la card a tutte le infocard di quel container
+        infocards = api.content.find(
+            context=aq_parent(parent),
+            portal_type="InformationCard"
+        )
+
+        for infocard in infocards:
+            infocard = infocard.getObject()
+            api.content.copy(source=self, target=infocard)
