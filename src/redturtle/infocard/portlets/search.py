@@ -1,9 +1,6 @@
 # -*- coding: utf-8 -*-
 from redturtle.infocard import logger
 from redturtle.infocard import _
-from redturtle.infocard.vocabularies import (
-    InfocardContainerServiceTypesFactory,
-)
 from redturtle.infocard.vocabularies import InfocardContainerRecipientsFactory
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone import api

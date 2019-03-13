@@ -8,6 +8,10 @@ from z3c.form import button
 from zope import schema
 from zope.interface import Invalid
 from zope.interface import invariant
+from redturtle.infocard.vocabularies import (
+    InfocardContainerServiceTypesFactory,
+    InfocardContainerRecipientsFactory,
+)
 
 
 class IInfocardContainerSearchForm(form.Schema):
@@ -66,10 +70,12 @@ class InfocardContainerSearchForm(form.SchemaForm):
         """ Given the data in the parameters filter the infocard
         """
         if data.get("servicetype"):
-            if not data.get("servicetype") in infocard.servicetypes:
+            voc = InfocardContainerServiceTypesFactory(self.context)
+            if not voc.getTermByToken(data.get("servicetype")).title in infocard.servicetypes:
                 return False
         if data.get("recipient"):
-            if not data.get("recipient") in infocard.recipients:
+            voc = InfocardContainerRecipientsFactory(self.context)
+            if not voc.getTermByToken(data.get("recipient")).title in infocard.recipients:
                 return False
         if data.get("text"):
             if not data.get("text").lower() in infocard.searched_text():
