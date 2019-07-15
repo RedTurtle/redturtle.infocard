@@ -70,12 +70,10 @@ class InfocardContainerSearchForm(form.SchemaForm):
         """ Given the data in the parameters filter the infocard
         """
         if data.get("servicetype"):
-            voc = InfocardContainerServiceTypesFactory(self.context)
-            if not voc.getTermByToken(data.get("servicetype")).title in infocard.servicetypes:
+            if not data.get("servicetype") in infocard.servicetypes:
                 return False
         if data.get("recipient"):
-            voc = InfocardContainerRecipientsFactory(self.context)
-            if not voc.getTermByToken(data.get("recipient")).title in infocard.recipients:
+            if not data.get("recipient") in infocard.recipients:
                 return False
         if data.get("text"):
             if not data.get("text").lower() in infocard.searched_text():
@@ -85,6 +83,9 @@ class InfocardContainerSearchForm(form.SchemaForm):
     def search_results(self, data):
         """
         """
+        voc_recipients = InfocardContainerRecipientsFactory(self.context)
+        voc_services = InfocardContainerServiceTypesFactory(self.context)
+
         infocards = self.context.listFolderContents(
             {"portal_type": "InformationCard"}
         )
@@ -98,9 +99,21 @@ class InfocardContainerSearchForm(form.SchemaForm):
                         "title": infocard.title,
                         "description": infocard.description,
                         "servicetypes": ", ".join(
-                            sorted(infocard.servicetypes)
+                            sorted(
+                                [
+                                    voc_services.getTermByToken(x).title
+                                    for x in infocard.servicetypes
+                                ]
+                            )
                         ),
-                        "recipients": ", ".join(sorted(infocard.recipients)),
+                        "recipients": ", ".join(
+                            sorted(
+                                [
+                                    voc_recipients.getTermByToken(x).title
+                                    for x in infocard.recipients
+                                ]
+                            )
+                        ),
                     }
                 )
         sorted(results, key=lambda x: x["title"])
